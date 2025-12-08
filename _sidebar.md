@@ -2,8 +2,8 @@
 * **入门指南**
     * [首页](/)            
 * **核心模块**
-    * [版本](page-one.md)
-    * [产品手册](page-two.md)
+    * [版本](page-one)
+    * [产品手册](page-two)
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTkyODgwNTcwOCwtMTc0NzU2NDkwLDQ3Nz
