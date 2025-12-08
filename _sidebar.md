@@ -2,8 +2,8 @@
 * **入门指南**
     * [首页](/)            
 * **核心模块**
-    * [版本](/.stackedit-data/release_version)
-    * [产品手册](/.stackedit-data/test.md)
+    * [版本](page-one)
+    * [产品手册](page-two)
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTIzMzAyNTQyMiwtOTI4ODA1NzA4LC0xNz
