@@ -24,6 +24,13 @@
 
 ## 导出文件
 
+|
+|  |  |
+|--|--|
+|  |  |
+|  |
+|--|--|
+|  |  |
 您可以通过单击菜单中的 **导入/导出** 来导出当前文件。您可以选择将文件导出为纯 Markdown、使用 Handlebars 模板的 HTML 或 PDF。
 
 
@@ -140,5 +147,6 @@ B --> D{菱形}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA1MjU3NjY2LC0yNjk4MDI2NDRdfQ==
+eyJoaXN0b3J5IjpbNjk0MzEzMzI4LDkwNTI1NzY2NiwtMjY5OD
+AyNjQ0XX0=
 -->
