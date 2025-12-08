@@ -2,7 +2,7 @@
 * **入门指南**
     * [首页](/)            
 * **核心模块**
-    * [版本](page-one)
+    * [版本](/.stackedit-data/test)
     * [产品手册](page-two)
 
 <!--stackedit_data:
