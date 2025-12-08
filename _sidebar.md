@@ -3,7 +3,7 @@
     * [首页](/)            
 * **核心模块**
     * [版本](/.stackedit-data/release_version)
-    * [产品手册](/.stackedit-dada/product)
+    * [产品手册](/.stackedit-data/product)
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTIzMzAyNTQyMiwtOTI4ODA1NzA4LC0xNz
