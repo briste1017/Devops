@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>操作手册 - Docsify</title>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+</head>
+<body>
+<div id="app"></div>
+<script>
+window.$docsify = {
+plugins: [
+function(hook, vm) {
+hook.mounted(function() {
+const editBtn = document.createElement('div');
+editBtn.id = 'edit-on-github';
+editBtn.style.position = 'fixed';
+editBtn.style.top = '20px';
+editBtn.style.right = '20px';
+editBtn.style.zIndex = '9999';
+document.body.appendChild(editBtn);
+});
+
+hook.afterEach(function(html, next) {
+const file = vm.route.file || 'README.md';
+const repoBase = 'https://github.com/briste1017/Devops/edit/master/';
+const editUrl = repoBase + file;
+const btn = document.getElementById('edit-on-github');
+if (btn) {
+btn.innerHTML =
+`<a href="${editUrl}" target="_blank" style="
+background:#fff;
+padding:6px 12px;
+color:#000;
+border-radius:6px;
+font-size:14px;
+text-decoration:none;
+">编辑本页</a>`;
+}
+
+next(html);
+});
+}
+],
+noCache: true,
+basePath: 'https://briste1017.github.io/Devops/',
+name: '操作手册',
+// repo: 'https://github.com/briste1017/Devops/edit/',
+loadSidebar: true,
+timeAlias: Date.now(),
+toc: {
+tocMaxLevel: 6,
+target: "h2,h3,h4,h5,h6,h1",
+},
+search: {
+depth: 6,
+noData: "没有搜到!",
+placeholder: "搜索...",
+},
+}
+// if (typeof window.$docsify === 'object') {
+// window.$docsify.plugins = [].concat(function (hook) {
+// hook.beforeEach(function (content, next) {
+// var hashPath = window.location.hash.substring(1);
+// console.log('--- 当前文档路由信息 ---');
+// if (hashPath === '/') {
+// console.log('Docsify 正在加载的文档路径 (README.md): /');
+// var filePath = hashPath + '.md';
+// } else {
+// console.log('Docsify 正在加载的文档路径: ' + hashPath + '.md');
+// var filePath = hashPath + '.md';
+// }
+// console.log('---------------------------');
+// var newRepoUrl = 'https://github.com/briste1017/Devops/edit/master/' + filePath;
+// vm.config.repo = newRepoUrl;
+// console.log('newRepoUrl:' + newRepoUrl);
+// next(content); }); },
+// window.$docsify.plugins || []
+// );
+// }
+// window.$docsify.plugins = [].concat( function (hook, vm) {
+// hook.beforeEach(function (content, next) {
+// vm.config.repo = newRepoUrl; next(content); }); }, window.$docsify.plugins || [] );
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>-->
+</body>
+</html>
+
