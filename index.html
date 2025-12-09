@@ -8,6 +8,18 @@
 <body>
 <div id="app"></div>
 <script>
+  let tenantIdFromAngular = null;
+
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.tenantId) {
+      tenantIdFromAngular = e.data.tenantId;
+    }
+  });
+  function canEdit() {
+    if (!tenantIdFromAngular) return false;
+    console.log('id:', tenantIdFromAngular);
+    return tenantIdFromAngular === '00000'; 
+  }
 window.$docsify = {
 plugins: [
 function(hook, vm) {
@@ -26,7 +38,7 @@ const file = vm.route.file || 'README.md';
 const repoBase = 'https://github.com/briste1017/Devops/edit/master/';
 const editUrl = repoBase + file;
 const btn = document.getElementById('edit-on-github');
-if (btn) {
+if (btn && canEdit()) {
 btn.innerHTML =
 `<a href="${editUrl}" target="_blank" style="
 background:#fff;
