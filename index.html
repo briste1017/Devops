@@ -38,7 +38,7 @@ const file = vm.route.file || 'README.md';
 const repoBase = 'https://github.com/briste1017/Devops/edit/master/';
 const editUrl = repoBase + file;
 const btn = document.getElementById('edit-on-github');
-if (btn && canEdit()) {
+if (btn) {
 btn.innerHTML =
 `<a href="${editUrl}" target="_blank" style="
 background:#fff;
